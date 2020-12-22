@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+
+body { 
+    height: 50%; 
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+} 
+
+h1 {
+  margin-top: 2%;
+  text-align: center;
+}
+
+#barnav {
+  height: 31%;
+  text-align: end;
+}
+
+#footer {
+  height: 19%;
+  text-align: justify;
+}
+
+.form {
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 3.5%;
+  width: 33%;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: #40a497;
+}
+
+.label {
+  margin: auto;
+  width: 40%;
+  color: black;
+  text-align: left;
+  vertical-align: top;
+}
+
+.form-control,
+.fileUpload {
+  margin: auto;
+  margin-top: -7px;
+  text-align: left;
+  width: 60%;
+  vertical-align: top;
+  display: inline;
+}
+
+.boutonPannel {
+  
+  margin-left: 40%;
+  border-radius: 1em;
+}
+
+button {
+  border-radius: 1em;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.retrait, .enchere {
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: auto;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: #40a497;
+}

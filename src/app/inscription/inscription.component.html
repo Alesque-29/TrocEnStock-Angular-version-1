@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inscription Troc-en-Stock</title>
+  </head>
+  <body>
+    <h1>Inscription</h1>
+
+    <form class="form" (ngSubmit)="onSignUp(f)" #f="ngForm">
+      <div class="form-group">
+        <label class="label" for="pseudo">Pseudo : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="pseudo"
+          ngModel
+          placeholder="Pseudo"
+          size="50"
+          required
+          autofocus
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="nom">Nom : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="nom"
+          ngModel
+          placeholder="Nom"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="prenom">Prénom : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="prenom"
+          ngModel
+          placeholder="Prénom"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="email">Email : </label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          ngModel
+          placeholder="Email"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="motDePasse">Mot de passe : </label>
+        <input
+          type="password"
+          class="form-control"
+          name="motDePasse"
+          ngModel
+          placeholder="Mot de passe"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="telephone">Téléphone : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="telephone"
+          ngModel
+          placeholder="Téléphone"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="rue">Rue : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="rue"
+          ngModel
+          placeholder="Rue"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="codePostal">Code postal : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="codePostal"
+          ngModel
+          placeholder="Code postal"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="ville">Ville : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="ville"
+          ngModel
+          placeholder="Ville"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="boutonPannel">
+        <button style="margin-right: 1%;" type="submit" [disabled]="f.invalid">
+          Enregistrer
+        </button>
+        <button routerLink="/">Annuler</button>
+      </div>
+    </form>
+
+  </body>
+</html>

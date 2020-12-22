@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+
+.navbar-brand span {
+  color: #fed136;
+  letter-spacing: 0.1em;
+  font-family: "Libre Baskerville", serif;
+}
+
+.navbar-brand {
+  color: #40a497;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.1em;
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding: 1.1em 1em !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #40a497;
+  font-family: "Libre Baskerville", serif;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fed136;
+}
+
+.navbar-expand-md .navbar-nav .dropdown-menu {
+  border-top: 3px solid #fed136;
+}
+
+nav {
+  -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+  -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  border: none;
+  background-color: black;
+}
+
+.shrink {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #212529;
+}
+
+.banner {
+  background-image: url("../../assets/img/fond_ecran_vente_aux_encheres_large.jpg");
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.banner-text {
+  padding: 200px 0 150px 0;
+}
+
+.banner-heading {
+  font-family: "Lobster", cursive;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 100px;
+  margin-bottom: 70px;
+  color: #40a497;
+}
+
+.banner-sub-heading {
+  font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+  color: red;
+}
+
+.btn-banner {
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}

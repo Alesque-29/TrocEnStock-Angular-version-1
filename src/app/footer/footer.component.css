@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+.footer1 {
+  background: #232323;
+  padding: 30px 0 0 0;
+  font-size: 15px;
+  color: #40A497;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.footer1 a {
+  color: #40A497;
+}
+
+.footer1 a:hover {
+  color: #ccc;
+}
+
+.footer1 .widget {
+  margin-bottom: 30px;
+}
+
+.footer1 .widget-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #40A497;
+  margin: 0 0 20px;
+}
+
+.footer1 .entry-meta {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 35px 0;
+  padding: 2px 0;
+  color: #888888;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.footer1 .entry-meta a {
+  color: #333333;
+}
+
+.footer1 .entry-meta .meta-in {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.follow-me-icons {
+  font-size: 30px;
+}
+
+.follow-me-icons i {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.footer2 {
+  background: #191919;
+  padding: 15px 0;
+  color: #40A497;
+  font-size: 15px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.footer2 a {
+  color: #40A497;
+}
+
+.footer2 a:hover {
+  color: #aaa;
+}
+
+.footer2 p {
+  margin: 0;
+}
+
+.widget-simplenav {
+  margin-left: -5px;
+}
+
+.widget-simplenav a {
+  margin: 0 5px;
+}
+/*# sourceMappingURL=footer.component.css.map */

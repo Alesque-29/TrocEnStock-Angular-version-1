@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Détails de mon enchère Troc-en-Stock</title>
+  </head>
+  <body>
+    <h1>Enchère en cours</h1>
+
+    <div class="form">
+      <div class="form-group">
+        <label class="label" for="nomArticle">Nom de l'objet : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="nomArticle"
+          value="{{ nomArticle }}"
+          readonly
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="description">Description : </label>
+        <textarea
+          type="text"
+          class="form-control"
+          name="description"
+          value="{{ description }}"
+          readonly
+        ></textarea
+        ><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="categorie">Catégorie : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="categorie"
+          value="{{ categorie }}"
+          readonly
+        />
+        <br />
+      </div>
+      <!--<div class="form-group">
+        <label class="label" for="photoArticle">Photo de l'objet : </label>
+        <input
+          type="file"
+          class="fileUpload"
+          name="photoArticle"
+          value="{{photoArticle}}"
+          readonly
+        /><br />
+      </div>-->
+      <div class="enchere">
+        <p
+          style="
+            text-decoration: underline;
+            padding-top: 1%;
+            padding-bottom: 2%;
+          "
+        >
+          Mon enchère
+        </p>
+        <div class="form-group">
+          <label class="label" for="debutEnchere">Début de l'enchère : </label>
+          <input
+            type="datetime"
+            class="form-control"
+            name="debutEnchere"
+            value="{{ dateDebutEncheres }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="finEnchere">Fin de l'enchère : </label>
+          <input
+            type="datetime"
+            class="form-control"
+            name="finEnchere"
+            value="{{ dateFinEncheres }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="miseAPrix">Mise à prix : </label>
+          <input
+            type="number"
+            class="form-control"
+            name="miseAPrix"
+            value="{{ miseAPrix }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="meilleureOffre">Meilleure offre : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="meilleureOffre"
+            value="{{ meilleureOffre }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="proposition">Ma proposition : </label>
+          <input
+            type="number"
+            class="form-control"
+            name="proposition"
+            value="{{ proposition }}"
+            readonly
+          /><br />
+        </div>
+      </div>
+      <div class="retrait">
+        <p
+          style="
+            text-decoration: underline;
+            padding-top: 1%;
+            padding-bottom: 2%;
+          "
+        >
+          Lieu de retrait de l'objet
+        </p>
+        <div class="form-group">
+          <label class="label" for="vendeur">Vendeur : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="vendeur"
+            value="{{ vendeur }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="rue">Rue : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="rue"
+            value="{{ rue }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="codePostal">Code postal : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="codePostal"
+            value="{{ codePostal }}"
+            readonly
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="ville">Ville : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="ville"
+            value="{{ ville }}"
+            readonly
+          /><br />
+        </div>
+      </div>
+      <div class="boutonPannel">
+        <button style="margin-right: 1%" routerLink="/mes-encheres">
+          retour
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

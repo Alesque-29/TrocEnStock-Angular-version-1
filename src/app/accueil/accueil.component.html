@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Accueil</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="ajust-tri-cat">
+    <h1 class="slogan">
+      PAS D'HISTOIRE D'ARGENT ENTRE NOUS<br />1 OBJET VENDU = 1 ACQUISITION
+    </h1>
+
+    <!--barre de recherche des catégories-->
+      <form [formGroup]="categorieForm">
+        <label class="libelleTrier">Trier :</label>
+        <select
+          class="tri-categorie"
+          formControlName="categorieControl"
+          (change)="selectCategorie()"
+        >
+          <option *ngFor="let categorie of categories" [value]="categorie">
+            {{ categorie }}
+          </option>
+        </select>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!--liste des objets de toutes les catégories-->
+        <ng-container *ngIf="this.isAllCat === true">
+          <div
+            *ngFor="let article of listeFiltre"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes accueil.png"
+                  class="logo_tes_accueil"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets de la catégorie "Electroménager"-->
+        <ng-container *ngIf="this.isElectromenager === true">
+          <div
+            *ngFor="let article of categorieElectromenager"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes electromenager.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets de la catégorie "Habillement"-->
+        <ng-container *ngIf="this.isHabillement === true">
+          <div
+            *ngFor="let article of categorieHabillement"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes habillement.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets de la catégorie "Informatique"-->
+        <ng-container *ngIf="this.isInformatique === true">
+          <div
+            *ngFor="let article of categorieInformatique"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes informatique.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets de la catégorie "Mobilier"-->
+        <ng-container *ngIf="this.isMobilier === true">
+          <div
+            *ngFor="let article of categorieMobilier"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes mobilier.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets de la catégorie "Téléphonie"-->
+        <ng-container *ngIf="this.isTelephonie === true">
+          <div
+            *ngFor="let article of categorieTelephonie"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="../../assets/img/logo tes telephonie.png"
+                  class="logo_tes_telephonie"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> points
+                </p>
+                <button class="btn btn-success" routerLink="encherir/details/{{ article.id }}">
+                  Enchèrir
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </body>
+</html>

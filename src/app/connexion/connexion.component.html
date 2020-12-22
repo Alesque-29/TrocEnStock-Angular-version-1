@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Connexion Troc-en-Stock</title>
+  </head>
+  <body>
+    <h1>Connexion</h1>
+
+    <form class="form" [formGroup]="userForm" (ngSubmit)="onSignIn()">
+      <div class="form-group">
+        <label class="label" for="email">Email : </label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          formControlName="email"
+          placeholder="Email"
+          size="50"
+          required
+          autofocus
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="motdepasse">Mot de passe : </label>
+        <input
+          type="password"
+          class="form-control"
+          name="motDePasse"
+          formControlName="motDePasse"
+          placeholder="Mot de passe"
+          required
+        />
+        <br />
+      </div>
+      <div class="boutonPannel">
+        <button
+          style="margin-right: 1%"
+          type="submit"
+          [disabled]="userForm.invalid"
+        >
+          Connexion
+        </button>
+        <button routerLink="/">Annuler</button>
+      </div>
+    </form>
+  </body>
+</html>

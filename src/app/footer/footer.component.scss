@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+
+.footer1 {
+  background: #232323;
+  padding: 20px 0 0 0;
+  font-size: 15px;
+  color: #40a497;
+  font-family: "Libre Baskerville", serif;
+}
+
+.footer1 a {
+  color: #40a497;
+}
+
+.footer1 a:hover {
+  color: #ccc;
+}
+
+.footer1 .widget {
+  margin-bottom: 15px;
+}
+
+.footer1 .widget-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #40a497;
+  margin: 0 0 20px;
+}
+
+.footer2 {
+  background: #191919;
+  padding: 15px 0;
+  color: #40a497;
+  font-size: 15px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.footer2 a {
+  color: #40a497;
+}
+
+.footer2 a:hover {
+  color: #aaa;
+}
+
+.footer2 p {
+  margin: 0;
+}
+
+.widget-simplenav {
+  margin-left: -5px;
+}
+
+.widget-simplenav a {
+  margin: 0 5px;
+}

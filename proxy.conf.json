@@ -1,0 +1,16 @@
+{
+    "/utilisateur/*": {
+        "target":"http://localhost:8081",
+        "secure": false
+    },
+
+    "/articlevendu/*": {
+        "target":"http://localhost:8082",
+        "secure": false
+    },
+
+    "/enchere/*": {
+        "target":"http://localhost:8083",
+        "secure": false
+    }
+}

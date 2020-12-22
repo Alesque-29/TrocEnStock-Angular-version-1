@@ -1,0 +1,73 @@
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 widget">
+          <h3 class="widget-title">Contact</h3>
+          <div class="widget-body">
+            <p>
+              Alexandre Delétoille<br />
+              64, rue du Design<br />
+              29200 Brest<br />
+              06 26 13 02 20<br />
+              <a href="mailto:#">alexandre.deletoille@hotmail.fr</a><br />
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-9 widget">
+          <h3 class="widget-title">Notre concept</h3>
+          <div class="widget-body">
+            <p>
+              Notre espace d'échange est basé sur un système de points. Ici
+              l'argent n'existe pas. Pour pouvoir acquérir de nouveaux objets,
+              vous devez avoir des points. Et pour cela vous devez avoir cédé un
+              objet précédemment.<br />
+              Ce concept est destiné à toutes les personnes désireuses de
+              favoriser les circuits courts. En y adhérant vous faites du bien à
+              notre planète. En effet, la réutilisation d'objets disponibles à
+              proximité de chez soi signifie également moins gaspiller les
+              ressources naturelles et penser aux générations futures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 widget">
+          <div class="widget-body">
+            <p class="simplenav">
+              <a routerLink="/">Accueil</a>
+              <a *ngIf="verifAuth() === true" routerLink="/compte/afficher"> | Mon compte | </a>
+              <a *ngIf="verifAuth() === true" routerLink="mes-ventes">Mes ventes | </a>
+              <a *ngIf="verifAuth() === true" routerLink="/mes-encheres">Mes enchères</a>
+              <a *ngIf="verifAuth() === false"> | </a>
+              <strong
+                ><a *ngIf="verifAuth() === false" routerLink="/inscription"
+                  >S'inscrire</a
+                ></strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 widget">
+          <div class="widget-body">
+            <p class="text-right">
+              Copyright &copy; 2020, Alesque. Designed by
+              <a
+                href="https://www.malt.fr/profile/alexandredeletoille"
+                target="_blank"
+                >AlesqueCompagny</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

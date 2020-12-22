@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Mes ventes</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="ajust-tri-ventes">
+      <h1>Mes ventes</h1>
+
+      <!--barre de recherche des ventes-->
+      <ng-container *ngIf="verifVentes() === true">
+        <form [formGroup]="ventesForm">
+          <label class="libelleMesVentes">Mes ventes :</label>
+          <select
+            class="tri-ventes"
+            formControlName="ventesControl"
+            (change)="selectTypeVentes()"
+          >
+            <option *ngFor="let vente of ventes" [value]="vente">
+              {{ vente }}
+            </option>
+          </select>
+        </form>
+      </ng-container>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <!--liste des objets avec vente en cours-->
+        <ng-container *ngIf="this.isEnCours === true">
+          <div
+            *ngFor="let article of listeUserVentesEnCours"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="https://image.freepik.com/psd-gratuit/cap-maquette_1310-498.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> pts
+                </p>
+                <button
+                  class="btn btn-success"
+                  routerLink="/vente/afficher/{{ article.id }}"
+                >
+                  Détails
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!--liste des objets avec vente terminée-->
+        <ng-container *ngIf="this.isTerminees === true">
+          <div
+            *ngFor="let article of listeUserVentesTerminees"
+            class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          >
+            <div class="box card">
+              <div class="box cardImg">
+                <img
+                  src="https://image.freepik.com/psd-gratuit/cap-maquette_1310-498.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="info">
+                <h3>{{ article.nomArticle }}</h3>
+                <p>
+                  <span>{{ article.miseAPrix }}</span> pts
+                </p>
+                <button
+                  class="btn btn-success"
+                  routerLink="/vente/terminee/afficher/{{ article.id }}"
+                >
+                  Détails
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vendre un article Troc-en-Stock</title>
+  </head>
+  <body>
+    <h1>Vendre un objet</h1>
+
+    <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <input hidden type="number" class="form-control" name="id" ngModel />
+      <div class="form-group">
+        <label class="label" for="nomArticle">Nom de l'objet : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="nomArticle"
+          ngModel
+          placeholder="Nom de l'objet"
+          size="50"
+          required
+          autofocus
+        /><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="description">Description : </label>
+        <textarea
+          type="text"
+          class="form-control"
+          name="description"
+          ngModel
+          placeholder="Description"
+          style="max-height: 150px"
+          maxlength="150"
+          required
+        ></textarea
+        ><br />
+      </div>
+      <div class="form-group">
+        <label class="label" for="categorie">Catégorie : </label>
+        <select class="form-control" name="categorie" ngModel required>
+          <option value="">--Veuillez choisir une catégorie--</option>
+          <option value="Electroménager">Electroménager</option>
+          <option value="Habillement">Habillement</option>
+          <option value="Informatique">Informatique</option>
+          <option value="Mobilier">Mobilier</option>
+          <option value="Téléphonie">Téléphonie</option></select
+        ><br />
+      </div>
+      <!--<div class="form-group">
+        <label class="label" for="photoArticle">Photo de l'objet : </label>
+        <input
+          type="file"
+          class="fileUpload"
+          name="photoArticle"
+          accept="image/*"
+          ngModel
+          required
+        /><br />
+      </div>-->
+      <div class="form-group">
+        <label class="label" for="debutEnchere">Début des enchères : </label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="debutEnchere"
+          ngModel
+          required
+        /><br />
+      </div>
+      <!--<div class="form-group">
+        <label class="label" for="finEnchere">Fin de l'enchère : </label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="finEnchere"
+          ngModel
+          required
+        /><br />
+      </div>-->
+      <div class="form-group">
+        <label class="label" for="miseAPrix">Mise à prix (points TES) : </label>
+        <input
+          type="number"
+          class="form-control"
+          name="miseAPrix"
+          ngModel
+          placeholder="Mise à prix (points TES)"
+          size="50"
+          required
+        /><br />
+      </div>
+      <div class="retrait">
+        <p
+          style="
+            text-decoration: underline;
+            padding-top: 1%;
+            padding-bottom: 2%;
+          "
+        >
+          Lieu de retrait de l'objet
+        </p>
+        <div class="form-group">
+          <label class="label" for="rue">Rue : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="rue"
+            [(ngModel)]="retraitRue"
+            value="{{ retraitRue }}"
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="codePostal">Code postal : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="codePostal"
+            [(ngModel)]="retraitCodePostal"
+            value="{{ retraitCodePostal }}"
+          /><br />
+        </div>
+        <div class="form-group">
+          <label class="label" for="ville">Ville : </label>
+          <input
+            type="text"
+            class="form-control"
+            name="ville"
+            [(ngModel)]="retraitVille"
+            value="{{ retraitVille }}"
+          /><br />
+        </div>
+      </div>
+      <div class="boutonPannel">
+        <button style="margin-right: 1%" type="submit" [disabled]="f.invalid">
+          Enregistrer
+        </button>
+        <button routerLink="/">Annuler</button>
+      </div>
+    </form>
+  </body>
+</html>
