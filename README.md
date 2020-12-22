@@ -1,0 +1,1 @@
+# TrocEnStock-Angular-version-1
